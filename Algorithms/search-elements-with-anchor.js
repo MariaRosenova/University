@@ -10,7 +10,7 @@ function anchorSearch(arr, targets) {
     return { found: i !== arr.length, count };
   }
   
-  let myArray = ['а','и', 'ш', 'к', 'о', 'в', 'а'];
+  let myArray = ['ш','и', 'ш', 'к', 'о', 'в', 'а'];
   
   let searchValues = ['а', 'б', 'в', 'г'];
   
