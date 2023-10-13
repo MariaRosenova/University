@@ -1,8 +1,6 @@
 function selectionSort(array) {
   const n = array.length;
 
-  let startTime = performance.now();
-
   for (let i = 0; i < n - 1; i++) {
     let minIndex = i;
 
