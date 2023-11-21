@@ -1,14 +1,3 @@
-// function mergeSort(A, p, r) {
-//   if (p>=r) return;
-//   let q = Math.floor((p+r) /2);
-//   mergeSort(A,p,q);
-//   mergeSort(A,q+1,r);
-//   merge(A,p,q,r);
-// }
-
-// let array = [6,5,12,10,9,1];
-// mergeSort(array, 0, array.length-1);
-// console.log("Sorted array is:", array);
 
 function merge(array, p, q, r) {
   let n1 = q - p + 1;
