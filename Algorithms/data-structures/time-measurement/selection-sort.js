@@ -18,14 +18,16 @@ function selectionSort(array) {
 
 function measureSelectionSortTime(arraySize) {
   const randomArray = [];
-  for (let i = 0; i < arraySize; i++) {
-    randomArray.push(Math.random());
+
+  for (let i = 1; i < arraySize; i++) {
+    randomArray.push(i);
   }
 
   const startTime = performance.now();
   selectionSort(randomArray);
   const endTime = performance.now();
   let result = endTime - startTime;
+
   return result;
 }
 

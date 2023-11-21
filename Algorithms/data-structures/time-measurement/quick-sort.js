@@ -1,12 +1,9 @@
 function quickSort(array) {
-
   if (array.length <= 1) {
     return array;
   }
 
-  let firstElement = 0;
-  let lastElement = array - 1;
-  let pivot = Math.floor((firstElement + lastElement) / 2);
+  let pivot = array[0];
 
   let left = [];
   let right = [];
@@ -21,19 +18,16 @@ function quickSort(array) {
       equal.push(element);
     }
   }
-
-//   return sortArray(left).concat(equal, sortArray(right));
 }
 
 function generateArrayWithRandomNumbers(arraySize) {
-
-  const arrayOfRandomEl = [];
-  for (let i = 0; i < arraySize; i++) {
-    arrayOfRandomEl.push(Math.random());
+  const arrayOfElements = [];
+  for (let i = 1; i < arraySize; i++) {
+    arrayOfElements.push(i);
   }
 
   const startTime = performance.now();
-  quickSort(arrayOfRandomEl);
+  quickSort(arrayOfElements);
   const endTime = performance.now();
 
   const result = endTime - startTime;
@@ -45,6 +39,6 @@ const arraySize = [
 ];
 
 for (const size of arraySize) {
-    const executionTime = generateArrayWithRandomNumbers(size);
-    console.log(`Array size: ${size}, Execution Time: ${executionTime} ms`)
+  const executionTime = generateArrayWithRandomNumbers(size);
+  console.log(`Array size: ${size}, Execution Time: ${executionTime} ms`);
 }
